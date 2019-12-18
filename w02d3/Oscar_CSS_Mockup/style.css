@@ -1,0 +1,63 @@
+body {
+   
+    text-align: center;
+}
+
+header {
+    background-color: blue;
+    width: 98%;
+    height: 600px;
+    clear: both;
+    margin: 0 auto;
+    
+}
+
+
+img {
+    width: 30px;
+}
+
+.topLogo {
+    float: left;
+    display: block;
+}
+
+.navLogo {
+    float: right;
+    
+    
+}
+
+.phone {
+    float: right;
+    clear: both;
+}
+
+.sectionWrapper {
+    width: 98%;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.section {
+
+    float: left;
+    
+    padding: 50px;
+    position: relative;
+    border: 1px solid gray;
+    overflow: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    width : 32%;
+    
+    
+}
+
+.secPic {
+    vertical-align: bottom;
+    height: 50%;
+}
