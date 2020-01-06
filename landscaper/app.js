@@ -20,9 +20,13 @@ const cutGrassButton = document.getElementById("cutGrass");
 const cutLawn = () => {
    
     if (currentTool == tools[0]) {
-        money += 1;
-    } else if (currentTool == tools[1]) {
         money += 5;
+    } else if (currentTool == tools[1]) {
+        money += 25;
+    } else if (currentTool == tools[2]) {
+        money += 50;
+    } else if (currentTool == tools[3]) {
+        money += 250;
     }
     console.log(money);
 }
