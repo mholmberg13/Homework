@@ -21,7 +21,8 @@ const cutLawn = () => {
    
     if (currentTool == tools[0]) {
         money += 1;
-    
+    } else if (currentTool == tools[1]) {
+        money += 5;
     }
     console.log(money);
 }
