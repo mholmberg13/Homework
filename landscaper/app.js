@@ -1,14 +1,16 @@
 
-const tools = ["teeth", "scissors", "old mower", "fancy mower", "starving students"]
-let money = 0;
-let currentTool = tools[0];
+const tools = ["teeth", "scissors", "an old mower", "a battery powered mower", "group of starving students"]
 
-console.log(currentTool);
+let money = 0;
+
+let currentTool = tools[0];
 
 const notEnough =() => {
     alert("not enough mulla");
 }
+
 const upgradeToolButton = document.getElementById("upgrade");
+
 document.getElementById("toolUsing").innerHTML = currentTool;
 document.getElementById("mulla").innerHTML = money;
 
@@ -34,8 +36,6 @@ const upgrade = () => {
         console.log(currentTool);
         money -= 500;
         document.getElementById("toolUsing").innerHTML = currentTool;
-    } else if (money >= 1000) {
-        alert("you just effin won that ish dawg!")
     } else {
         notEnough()
     }
@@ -67,7 +67,10 @@ const cutLawn = () => {
     } else {
 
     }
-    console.log(money);
+        if (money >= 1000) {
+            document.getElementById("mulla").innerHTML = money;
+            alert("YOU WON");
+        }
 }
     
 cutGrassButton.addEventListener('click', cutLawn);
