@@ -8,10 +8,14 @@
         </style>
 </head>
 <body></body>
-    <h1><%= pokemon.name %></h1>
-    <ul>
+    <h1>Gotta Catch Em all!</h1>
+    <h2><%= pokemon.name %></h2>
+    
 
-    </ul>
+    <% const image = pokemon.img + ".jpg"; %>
+    <img src=<%= image %> >
+    <br>
+    <a href="/pokemon">Back</a>
 
 
 </body>
