@@ -13,7 +13,7 @@
         <% for (let i = 0; i < pokemon.length; i++) { %>
             <% const name = pokemon[i].name; %>
             <% const capIt = name.charAt(0).toUpperCase() + name.slice(1); %>
-            <li> <%= capIt %></li>
+            <li> <a href="pokemon/<%= i %>"><%= capIt %></a></li>
             <% } %>
     </ul>
 
