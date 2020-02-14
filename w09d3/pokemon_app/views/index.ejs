@@ -9,5 +9,14 @@
 </head>
 <body></body>
     <h1>See All of the Pokemon!</h1>
+    <ul>
+        <% for (let i = 0; i < pokemon.length; i++) { %>
+            <% const name = pokemon[i].name; %>
+            <% const capIt = name.charAt(0).toUpperCase() + name.slice(1); %>
+            <li> <%= capIt %></li>
+            <% } %>
+    </ul>
+
+
 </body>
 </html>
