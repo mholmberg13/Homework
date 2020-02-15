@@ -2,20 +2,40 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <style> body {
-        background-color: rgba(8, 164, 226, 0.767);
-        color: rgb(236, 166, 74);}
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style> 
+        body {
+            text-align: center;
+            background-color: rgba(252, 249, 64, 0.842);
+            color: rgb(221, 49, 49);
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        h1, h2 {
+             -webkit-text-stroke: 1px rgb(21, 61, 241);
+        }
+
+        img {
+            margin-top: 10px;
+            border: 5px solid rgb(21, 61, 241);
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(21, 61, 241);
+        }
         </style>
 </head>
 <body></body>
     <h1>Gotta Catch Em all!</h1>
     <h2><%= pokemon.name %></h2>
-    
+    <br>
+    <a href="/pokemon">Back</a>
+    <br>
 
     <% const image = pokemon.img + ".jpg"; %>
     <img src=<%= image %> >
-    <br>
-    <a href="/pokemon">Back</a>
+    
 
 
 </body>

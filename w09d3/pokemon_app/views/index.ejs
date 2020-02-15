@@ -2,20 +2,59 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <style> body {
-        background-color: rgba(8, 164, 226, 0.767);
-        color: rgb(236, 166, 74);}
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style> 
+        body {
+            text-align: center;
+            background-color: rgba(252, 249, 64, 0.842);
+            color: rgb(221, 49, 49);
+            font-family: 'Press Start 2P', cursive;
+            }
+
+        h1 {
+            -webkit-text-stroke: 1px rgb(21, 61, 241);
+        }
+
+        .list {
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgba(163, 1, 1, 0.76);
+            padding: 5px;
+            width: 20%;
+            border: 3px solid rgb(33, 54, 243);
+            
+        }
+        li {
+            list-style-type: none;
+            line-height: 25px;
+            
+        }
+         
+        a {
+            text-decoration: none;
+            color: rgb(33, 54, 243);
+        }
+
         </style>
 </head>
 <body></body>
     <h1>See All of the Pokemon!</h1>
-    <ul>
-        <% for (let i = 0; i < pokemon.length; i++) { %>
-            <% const name = pokemon[i].name; %>
-            <% const capIt = name.charAt(0).toUpperCase() + name.slice(1); %>
-            <li> <a href="pokemon/<%= i %>"><%= capIt %></a></li>
-            <% } %>
-    </ul>
+    <div class="list">
+        <ul>
+            <% for (let i = 0; i < pokemon.length; i++) { %>
+                <% const name = pokemon[i].name; %>
+                <% const capIt = name.charAt(0).toUpperCase() + name.slice(1); %>
+                <li> <a href="pokemon/<%= i %>"><%= capIt %></a></li>
+                <% } %>
+        </ul>
+    </div>
 
 
 </body>
