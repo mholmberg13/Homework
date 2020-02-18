@@ -8,6 +8,10 @@ const budget = require("./models/budget.js");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
+app.get("/:id", (req, res) => {
+    res.render("show.ejs", {budget: budget[req.params.id]});
+});
+
 app.get("/", (req, res) => {
     res.render("index.ejs", {budget: budget});
 })
