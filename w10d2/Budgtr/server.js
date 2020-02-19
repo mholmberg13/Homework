@@ -8,6 +8,19 @@ const budget = require("./models/budget.js");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
+app.post("/", (req, res) => {
+    let budget = {}
+    budget.date = req.body.date
+    budget.name = req.body.name
+    budget.amount = req.body.amount
+    budget.from = req.body.from
+    budget.push(budget)
+});
+
+app.get("/new", (req, res) => {
+    res.render("new.ejs");
+});
+
 app.get("/:id", (req, res) => {
     res.render("show.ejs", {budget: budget[req.params.id]});
 });
