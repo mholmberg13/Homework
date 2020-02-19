@@ -9,12 +9,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
 app.post("/", (req, res) => {
-    let budget = {}
-    budget.date = req.body.date
-    budget.name = req.body.name
-    budget.amount = req.body.amount
-    budget.from = req.body.from
-    budget.push(budget)
+    let newBudget = {}
+    newBudget.date = req.body.date
+    newBudget.name = req.body.name
+    newBudget.amount = req.body.amount
+    newBudget.from = req.body.from
+    budget.push(newBudget)
+    res.redirect("/");
 });
 
 app.get("/new", (req, res) => {
