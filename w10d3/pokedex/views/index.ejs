@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokedex</title>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
     <h1>Pokedex</h1>
-    <% for (i = 0; i < 20; i++) { %>
-        <img src="<%= data[i].img %>">
-    <% } %>
-    
+    <div class="container">
+            <% for (i = 0; i < data.length; i++) { %>
+                <div class="image-link"><a href="/pokemon/<%= i %>"><img src="<%= data[i].img %>"></a>
+                    <br>
+                    <div class="poke-name"><%= data[i].name %></div>
+                
+                </div>
+            <% } %> 
+    </div>
+    <a href="/pokemon">Home</a>
 </body>
 </html>

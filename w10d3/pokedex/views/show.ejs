@@ -9,18 +9,24 @@
     <div class="container">
     <h1><%= data.name %></h1>
     <img src="<%= data.img %>">
-    <ul>
-        <li><strong>Type:</strong>
+    
+        <ul><strong>Type:</strong>
         <% data.type.forEach((type) => { %>
-            <%= type %>
+            <li><%= type %></li>
         <% }) %>
-        </li>
-    </ul>
+        </ul>
+    
     <h2>STATS</h2>
-    <p><strong>HP:</strong><%=data.stats.hp %></p>
-    <p><strong>ATTACK:</strong><%=data.stats.attack %></p>
-    <p><strong>DEFENSE:</strong><%=data.stats.defense %></p>
+    <p><strong>HP:</strong> <%=data.stats.hp %></p>
+    <p><strong>ATTACK:</strong> <%=data.stats.attack %></p>
+    <p><strong>DEFENSE:</strong> <%=data.stats.defense %></p>
     </div>
+
+    <form action="/pokemon/<%= index %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete">
+    </form>
+    <a href="/pokemon/<%= index %>/edit">Edit</a>
+    <a href="/pokemon">Home</a>
     
 </body>
 </html>
