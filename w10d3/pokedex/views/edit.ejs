@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit Pokemon</title>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h1>Edit Pokemon</h1>
-    <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
-    Name: <input type="text" name="name" value="<%= data.name %>"/><br>
-    Image: <input type="text" name="img" value="<%= data.img %>"/><br>
-    Type: <input type="text" name="type" value="<%= data.type %>"/><br>
-    <strong>Stats</strong><br>
-    HP: <input type="text" name="hp" value="<%= data.stats.hp %>"/><br>
-    Attack: <input type="text" name="attack" value="<%= data.stats.attack %>"/><br>
-    Defense: <input type="text" name="defense" value="<%= data.stats.defense %>"/><br>
-
-    <input type="submit" name="" value="Submit Changes"/>
-    </form>
+    <header>
+        <h1>Edit Pokemon</h1>
+    </header>
+    
+    <div class="cont-container">
+        <div class="edit-new-container">
+            <form class="new-form" action="/pokemon/<%= index %>?_method=PUT" method="POST">
+                
+                Name: <input type="text" name="name" value="<%= data.name %>"/><br>
+                Image: <input type="text" name="img" value="<%= data.img %>"/><br>
+                Type: <input type="text" name="type" value="<%= data.type %>"/><br>
+                
+                <strong>Stats</strong><br>
+                
+                HP: <input type="text" name="hp" value="<%= data.stats.hp %>"/><br>
+                Attack: <input type="text" name="attack" value="<%= data.stats.attack %>"/><br>
+                Defense: <input type="text" name="defense" value="<%= data.stats.defense %>"/><br>
+                <div class="change">
+                    <input type="submit" name="" value="Submit Changes"/>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <a href="/pokemon">Home</a>
     

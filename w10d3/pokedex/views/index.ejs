@@ -9,16 +9,24 @@
 
 </head>
 <body>
-    <h1>Pokedex</h1>
+    <header>
+        <h1>Pokedex</h1>
+    </header>
+    <br>
+    <a href="/pokemon/new">Add New Pokemon</a>
     <div class="container">
+        
             <% for (i = 0; i < data.length; i++) { %>
-                <div class="image-link"><a href="/pokemon/<%= i %>"><img src="<%= data[i].img %>"></a>
+                <div class="image-link">
+                    <a href="/pokemon/<%= i %>">
+                        <div class="poke-image"><img src="<%= data[i].img %>"></div>
+                    </a>
                     <br>
                     <div class="poke-name"><%= data[i].name %></div>
                 
                 </div>
             <% } %> 
     </div>
-    <a href="/pokemon">Home</a>
+    <a href="/pokemon">Top</a>
 </body>
 </html>
