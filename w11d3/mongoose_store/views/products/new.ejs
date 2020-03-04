@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include('../partials/head.ejs') %>
+</head>
+<body>
+  <%- include('../partials/header.ejs') %>
+  <a href="/products">HOME</a>
+  <h3>Add New Product</h3>
+  <div class="container-container">
+    <div class="new-edit-container">
+      <form action="/products" method="POST">
+        Name: <input class="box" type="text" name="name" /><br />
+        Description: <input class="box" type="text" name="color" /><br />
+        Image URL: <input class="box" type="text" name="img" /><br />
+        Price: <input class="box" type="text" name="price" /><br />
+        QTY: <input class="box" type="text" name="qty" /><br />
+        <input class="add-product" type="submit" name="" value="Add Product" />
+      </form>
+    </div>
+  </div>
+</body>
+</html>

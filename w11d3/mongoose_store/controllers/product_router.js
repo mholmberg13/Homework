@@ -6,13 +6,13 @@ const Products = require("../models/products.js");
 
 // NEW
 router.get('/new', (req, res) => {
-    res.render('new.ejs');
+    res.render('products/new.ejs');
 });
 
 // EDIT
 router.get('/:id/edit', (req, res) => {
     Products.findById(req.params.id, (err, newProduct) => {
-        res.render('edit.ejs', {
+        res.render('products/edit.ejs', {
             product: newProduct
         });
     });
@@ -21,7 +21,7 @@ router.get('/:id/edit', (req, res) => {
 // SHOW
 router.get('/:id', (req, res) => {
     Products.findById(req.params.id, (err, newProduct) => {
-        res.render("show.ejs", {
+        res.render("products/show.ejs", {
             product: newProduct
         });
     });
@@ -63,7 +63,7 @@ router.get("/seed", async (req, res) => {
 // INDEX
 router.get("/", (req, res) => {
     Products.find({}, (error, products) => {
-        res.render("index.ejs", { products });
+        res.render("products/index.ejs", { products });
     });
     
 });
@@ -74,21 +74,21 @@ router.get("/", (req, res) => {
 // CREATE
 router.post('/', (req, res) => {
     Products.create(req.body, (err, data) => {
-        res.redirect('/index/')
+        res.redirect('/products/')
     });
 });
 
 // DESTROY
 router.delete('/:id', (req, res) => {
     Products.findByIdAndDelete(req.params.id, (err, data) => {
-        res.redirect('/index/');
+        res.redirect('/products/');
     });
 });
 
 // UPDATE
 router.put('/:id', (req, res) => {
     Products.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, data) => {
-        res.redirect('/index');
+        res.redirect('/products/');
     });
 });
 
@@ -97,7 +97,7 @@ router.put("/:id/buy", (req, res) => {
     Products.findById(req.params.id, (err, boughtProduct) => {
         boughtProduct.qty -= 1;
         Products.findByIdAndUpdate(req.params.id, boughtProduct, (err, data) => {
-          res.redirect(`/index/${req.params.id}`);
+          res.redirect(`/products/${req.params.id}`);
         });
     });
 });

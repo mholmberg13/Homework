@@ -1,0 +1,106 @@
+body {
+    background-color: white;
+    color:black;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+   
+}
+
+.header {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+.header h1 {
+    padding-top: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 5px;
+    
+}
+
+.container-container {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    width: 80%;
+    margin-top: 15px;
+}
+
+.product-box {
+    flex-grow: 1;
+    width: 200px;
+    max-width: 200px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 10px;
+    background-color: white;
+}
+
+.product-box img {
+    max-width: 90px;
+    margin: 10px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.new-edit-container {
+    text-align: right;
+    margin-right: 12%;
+}
+
+input {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1em;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: none;
+}
+
+.box {
+    border: 1px solid rgb(0, 0, 0);
+    margin: 5px;
+}
+
+.add-product {
+    margin-right: 15%;
+    margin-top: 15px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.show-img {
+    height: 200px;
+    margin: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.buy-delete {
+    margin: 15px;
+}
+
+.new-edit-container input {
+    border: 2px solid rgb(0, 0, 0);
+    margin: 5px;
+}

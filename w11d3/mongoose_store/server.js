@@ -4,8 +4,10 @@ const methodOverride = require('method-override');
 
 // Load up mongoose npm as mongoose:
 const mongoose = require("mongoose");
+app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+
 
 // Connect mongoose to mongo db:
 mongoose.connect("mongodb://localhost:27017/productsdb", {
@@ -21,7 +23,7 @@ mongoose.connection.once("open", () => {
 const productController = require("./controllers/product_router.js");
 // any routes that come in for fruits should be sent
 // to the fruitsContoller
-app.use("/index", productController);
+app.use("/products", productController);
 
 // Web server:
 app.listen(3001, () => {
