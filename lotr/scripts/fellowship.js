@@ -43,6 +43,7 @@ const makeMiddleEarth = () => {
   
   // 1. create a section tag with an id of middle-earth
   $section = $('<section>');
+  $($section).attr('id', 'middle-earth');
   // 2. append the section to the body of the DOM.
   $('body').append($section);
   // 3. use a for loop to iterate over the lands array that does the following:
@@ -133,13 +134,18 @@ const makeBaddies = () => {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-
+  $aside = $('<aside>')
+  $('#middle-earth').append($aside);
   // 2. display an unordered list of buddies in the aside
-
+  $buddies = $('<ul>')
+  for (i = 0; i < buddies.length; i++) { 
+    $bud = $(`<li>${buddies[i]}</li>`);
   // 3. give each of the buddies a class of "buddy"
-
+  $($bud).attr('id', buddies[i]);
   // 4. don't forget to append them to the aside
-
+  $($buddies).append($bud);
+  $($aside).append($buddies);
+  }
 };
 
 // COMMIT YOUR WORK
