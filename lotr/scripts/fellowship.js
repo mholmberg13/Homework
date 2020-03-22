@@ -275,11 +275,14 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
+  $('#the-ring').remove();
+  $($gollum).remove();
   // 2. remove all the baddies from the DOM
-
+  $($baddies).remove();
   // 3. Move all the hobbits back to the shire
-
+  $($list).appendTo('#The-Shire')
+  $('#Frodo').appendTo('#The-Shire');
+  $(`li[id="Samwise 'Sam' Gamgee"]`).appendTo('#The-Shire');
 };
 
 // COMMIT YOUR WORK
