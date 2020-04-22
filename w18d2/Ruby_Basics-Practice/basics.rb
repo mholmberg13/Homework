@@ -133,3 +133,14 @@ def print_item_sums(hashone, hashtwo)
     p sum
 end
 print_item_sums(lamp, table)
+
+
+
+# ////////// SOLVING PROBLEMS WITH RUBY ////////////
+numbers = []
+ for i in 1...1000 do
+    if i % 3 == 0 or i % 5 == 0
+    numbers.push(i)
+    end
+ end
+p numbers.sum
