@@ -80,18 +80,56 @@
 # ////////// METHODS ////////////
 
 # 1
-def find_area(width, height) 
-    area = width * height
-    p area
-end
-find_area(10, 10)
+# def find_area(width, height) 
+#     area = width * height
+#     p area
+# end
+# find_area(10, 10)
 
-# 2
+# # 2
+# def multiply_each_by_five
+#     nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
+#     for i in 0...nums.length do
+#         p nums[i] * 5
+#     end
+# end
+# multiply_each_by_five()
 
-def multiply_each_by_five
-    nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
-    for i in 0...nums.length do
-        p nums[i] * 5
-    end
+
+
+# ////////// METHODS WITH A HASH ////////////
+
+book = {
+  title: 'The Great Gatsby',
+  author: 'F Scott Fitzgerald',
+  year: 1925,
+  price: 10
+}
+
+lamp = {
+  type: 'reading',
+  brand: 'Ikea',
+  price: 25
+}
+
+table = {
+  type: 'bed side',
+  brand: 'Crate & Barrel',
+  color: 'birch',
+  price: 50
+}
+
+
+def print_price(hash) 
+    price = hash[:price]
+    p price
 end
-multiply_each_by_five()
+print_price(book)
+
+def print_item_sums(hashone, hashtwo)
+    priceone = hashone[:price]
+    pricetwo = hashtwo[:price]
+    sum = priceone + pricetwo
+    p sum
+end
+print_item_sums(lamp, table)
