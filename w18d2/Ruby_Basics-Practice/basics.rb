@@ -64,15 +64,34 @@
 
 # //////////// COLOR ARRAY /////////////
 
-colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+# colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+
+# # 1
+# p colors.sample
+
+# # 2
+# p colors.reverse
+
+# # 3
+# for i in 0...colors.length do
+#     p colors[i].upcase()
+# end
+
+# ////////// METHODS ////////////
 
 # 1
-p colors.sample
+def find_area(width, height) 
+    area = width * height
+    p area
+end
+find_area(10, 10)
 
 # 2
-p colors.reverse
 
-# 3
-for i in 0...colors.length do
-    p colors[i].upcase()
+def multiply_each_by_five
+    nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
+    for i in 0...nums.length do
+        p nums[i] * 5
+    end
 end
+multiply_each_by_five()
