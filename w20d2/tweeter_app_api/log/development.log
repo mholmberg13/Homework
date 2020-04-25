@@ -46,3 +46,61 @@ Processing by TweetsController#index as HTML
 Completed 200 OK in 14ms (Views: 5.3ms | ActiveRecord: 6.5ms | Allocations: 3641)
 
 
+Started GET "/tweets/1" for ::1 at 2020-04-25 15:32:54 -0500
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:8:in `show'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 2181)
+
+
+Started POST "/tweets?tweet[" for ::1 at 2020-04-25 15:42:35 -0500
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"tweetone", "content"=>"contentone", "author"=>"authorone"}, "tweet["=>nil}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:16:in `create'
+  [1m[36mTweet Create (1.0ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "tweetone"], ["content", "contentone"], ["author", "authorone"]]
+  ↳ app/controllers/tweets_controller.rb:16:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:16:in `create'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 4445)
+
+
+Started GET "/tweets/" for ::1 at 2020-04-25 15:42:49 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1114)
+
+
+Started POST "/tweets" for ::1 at 2020-04-25 15:43:14 -0500
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"tweetone", "content"=>"contentone", "author"=>"authorone"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:16:in `create'
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "tweetone"], ["content", "contentone"], ["author", "authorone"]]
+  ↳ app/controllers/tweets_controller.rb:16:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:16:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 2180)
+
+
+Started POST "/tweets" for ::1 at 2020-04-25 15:44:37 -0500
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"Crentist", "content"=>"Dwight", "author"=>"My dentist's name is Crentist, maybe that's why he became a dentist"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:16:in `create'
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Crentist"], ["content", "Dwight"], ["author", "My dentist's name is Crentist, maybe that's why he became a dentist"]]
+  ↳ app/controllers/tweets_controller.rb:16:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:16:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 2165)
+
+
+Started GET "/tweets/" for ::1 at 2020-04-25 15:44:41 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1245)
+
+
