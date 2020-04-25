@@ -31,3 +31,18 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 2263)
 
 
+Started GET "/" for ::1 at 2020-04-25 15:31:39 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mattholmberg/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mattholmberg/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.6ms | Allocations: 295)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 1544)
+
+
+Started GET "/tweets" for ::1 at 2020-04-25 15:31:45 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 5.3ms | ActiveRecord: 6.5ms | Allocations: 3641)
+
+
