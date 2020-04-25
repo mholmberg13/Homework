@@ -23,3 +23,11 @@ Migrating to CreateTweets (20200425194910)
   [1m[36mTweet Create (0.2ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "I'm walkin' here"], ["content", "Hey, I'm walkin' here!"], ["author", "Nicky62"]]
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-04-25 15:28:02 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mattholmberg/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mattholmberg/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.0ms | Allocations: 409)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 2263)
+
+
