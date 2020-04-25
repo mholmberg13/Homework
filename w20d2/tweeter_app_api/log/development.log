@@ -206,3 +206,24 @@ Processing by TweetsController#update as */*
 Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 10.7ms | Allocations: 5142)
 
 
+Started DELETE "/tweets/4" for ::1 at 2020-04-25 15:51:42 -0500
+Processing by TweetsController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:30:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:30:in `destroy'
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/tweets_controller.rb:30:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:30:in `destroy'
+Completed 204 No Content in 12ms (Views: 0.1ms | ActiveRecord: 5.5ms | Allocations: 4580)
+
+
+Started GET "/tweets/" for ::1 at 2020-04-25 15:51:47 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 1150)
+
+
